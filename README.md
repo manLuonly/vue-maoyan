@@ -27,3 +27,26 @@ vue init webpack fore-end
 - package.json   项目的描述文件
 - README.md       项目的读我文件
 - yarn.lock       npm | yarn 是用来处理依赖包的版本问题。
+
+# 单文件组件 （.vue）一个文件就是一个组件，能够通过 esm 去引入
+```js
+3大块：
+
+<template>
+  // 组件的模板
+</templte>
+
+<script>
+  // 暴露组件的选项对象
+export default {
+
+}
+</script>
+
+<style>
+// 写样式
+</style>
+```
+
+
+# eslint 的好处：
