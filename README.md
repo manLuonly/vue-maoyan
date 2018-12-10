@@ -45,8 +45,11 @@ export default {
 
 <style>
 // 写样式
+// PS: scoped 能够让我们当前样式只对当前的组件生效。。。。
 </style>
 ```
 
 
 # eslint 的好处：
+
+# vue-cli 2.x 中使用 scss 文件，需要安装 node-sass sass-loader

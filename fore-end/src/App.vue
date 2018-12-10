@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <NavBar></NavBar>
+
+    <div class="nav-bar">wo shiyige da div </div>
   </div>
 </template>
 
 <script>
+// 引入组件
+import NavBar from './components/NavBar/index';
+
 export default {
-  name: 'App'
+  name: 'App',
+
+  components: {
+    NavBar
+  }
 };
 </script>
 
-<style>
+<style lang="scss">
+@import './styles/base.scss';
 </style>
