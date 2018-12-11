@@ -1,25 +1,7 @@
 <template>
   <div class="films-list">
-    <!-- 轮播图 -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="../images/pic-1.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-2.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-3.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-4.jpg" alt="">
-        </div>
-      </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-    </div>
-    <!-- /轮播图 -->
+
+    <Banner></Banner>
 
     <!-- 定位城市 -->
     <div class="city-fixed">
@@ -46,7 +28,8 @@
       <ul>
         <li
           v-for="(item, index) in films"
-          :key="index">
+          :key="index"
+          @click="goDetail(item.filmId)">
           <div class="img">
             <img :src="item.poster" alt="">
           </div>
@@ -78,9 +61,14 @@
 // 引入 Swiper
 import Swiper from 'swiper';
 import axios from 'axios';
+import Banner from '@/components/Banner';
 
 export default {
   name: 'Films',
+
+  components: {
+    Banner
+  },
 
   data () {
     return {
@@ -132,6 +120,14 @@ export default {
       });
 
       return arr.join(' ');
+    },
+
+    /**
+     * 去详情页面
+     */
+    goDetail (filmId) {
+      console.log(filmId);
+      this.$router.push(`/film/${filmId}`);
     }
   },
 
@@ -163,18 +159,6 @@ export default {
 .films-list {
   flex: 1;
   overflow-y: auto;
-}
-
-.swiper-container {
-  height: px2rem(210);
-
-  .swiper-pagination-bullet {
-    width: px2rem(10);
-    height: px2rem(10);
-  }
-  .swiper-pagination-bullet-active {
-    background: yellowgreen;
-  }
 }
 
 .city-fixed {

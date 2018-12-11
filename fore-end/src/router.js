@@ -6,6 +6,7 @@ import VueRouter from 'vue-router';
 import Films from './views/Films.vue';
 import Cinema from './views/Cinema.vue';
 import Center from './views/Center.vue';
+import FilmDetail from './views/FilmDetail.vue';
 
 // 插件安装
 Vue.use(VueRouter);
@@ -29,6 +30,12 @@ const router = new VueRouter({
       path: '/center',
       name: 'center',
       component: Center
+    },
+    {
+      // 详情页面
+      path: '/film/:filmId',
+      name: 'filmDetail',
+      component: FilmDetail
     },
     {
       path: '*',
