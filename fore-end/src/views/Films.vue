@@ -112,6 +112,7 @@ export default {
           // PS: res 不单单包含后台给的数据，还有一些个额外的东西。
           // console.log(res);
           let result = response.data;
+          console.log(result);
           if (result.status === 0) {
             this.films = result.data.films;
           } else {
