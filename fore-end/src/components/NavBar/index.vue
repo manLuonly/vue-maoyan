@@ -44,6 +44,7 @@ export default {
 @import '../../styles/common/px2rem.scss';
 
 .nav-bar {
+  flex-shrink: 0; // 不受兄弟压缩
   display: flex;
   height: px2rem(50);
   border-top: px2rem(1) solid #ededed;
