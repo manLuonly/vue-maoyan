@@ -53,3 +53,14 @@ export default {
 # eslint 的好处：
 
 # vue-cli 2.x 中使用 scss 文件，需要安装 node-sass sass-loader
+
+# vue-cli 脚手架中使用 vue-router
+
+1. 下载 npm install --save vue-router
+2. 在 src 下面新建一个 router.js 文件。在这个文件中做 路由相关的配置
+3. 在 src 下面 入口文件 main.js 中 引入第二步导出的路由管理器对象，并使用 router选项配置在 new Vue() 的地方。
+
+PS: 用npm的方法下载的 vue-router ，需要使用 Vue.use() 来挂载一下。 router-link  router-view
+
+
+# router-link tag 属性能够让 router-link 最终渲染成什么元素
