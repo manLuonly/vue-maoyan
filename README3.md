@@ -12,3 +12,29 @@
 # sass 与 less 中可以经常性的看到 这种 @import
 
 # import 跟 nodejs 中 require 非常像。
+
+# 跨域的产生原因
+
+> 由于浏览器的同源策略。
+
+# 解决跨域的方法
+
+- jsonp
+- cors
+- 正向代理
+- 反向代理
+
+# 正向代理
+
+> 浏览器与服务器中间加了一个 nodejs 服务中间层
+
+A - 浏览器   http://localhost:8080
+
+B - 服务器   http://localhost:3000
+
+C - 中间层 （服务端器） http://localhost:8080
+
+A - C - B
+B - C - A
+
+vue-cli 2.x 的版本中，我们去 config/index.js  dev  proxyTable 配置。。。。。

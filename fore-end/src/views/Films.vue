@@ -87,7 +87,11 @@ export default {
       // 当前城市
       curCity: '',
 
-      films: []
+      films: [],
+
+      pageNum: 1, // 当前页码
+      pageSize: 5, // 每页条数
+      totalPage: 0 // 总页数
     }
   },
 
@@ -107,18 +111,24 @@ export default {
      * 获取影片
      */
     getFilms () {
-      axios.get('/static/api/homepage.json')
-        .then((response) => {
-          // PS: res 不单单包含后台给的数据，还有一些个额外的东西。
-          // console.log(res);
-          let result = response.data;
-          console.log(result);
-          if (result.status === 0) {
-            this.films = result.data.films;
-          } else {
-            alert(result.msg);
-          }
-        })
+      // localhost:3000/api/film/list
+      axios.get('/api/film/list', {
+        params: {
+          // get 请求的参数要放在这个里面传递
+          pageNum: this.pageNum,
+          pageSize: this.pageSize
+        }
+      }).then((response) => {
+        // PS: res 不单单包含后台给的数据，还有一些个额外的东西。
+        // console.log(res);
+        let result = response.data;
+        console.log(result);
+        if (result.code === 0) {
+          this.films = result.data.films;
+        } else {
+          alert(result.msg);
+        }
+      })
     },
 
     /**
