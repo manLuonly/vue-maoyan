@@ -126,6 +126,10 @@ export default {
   .swiper-pagination-bullet-active {
     background: yellowgreen;
   }
+
+  img {
+    width: 100%;
+  }
 }
 
 .city-fixed {

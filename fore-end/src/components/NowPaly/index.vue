@@ -27,6 +27,8 @@
         <div class="buy">购票</div>
       </li>
     </ul>
+
+    <div class="load-more" @click="loadMore">{{ loadMoreText }}</div>
   </div>
   <!-- /list -->
 </template>
@@ -40,8 +42,11 @@ export default {
   data () {
     return {
       films: [],
+
+      loadMoreText: '点击，加载下一页',
+
       pageNum: 1, // 当前页码
-      pageSize: 5, // 每页条数
+      pageSize: 10, // 每页条数
       totalPage: 0 // 总页数
     }
   },
@@ -63,8 +68,21 @@ export default {
         // console.log(res);
         let result = response.data;
         console.log(result);
+
+        // 一共多少页
+        this.totalPage = Math.ceil(result.data.total / this.pageSize);
+
+        // 判断是否还有更多页
+        if (this.pageNum >= this.totalPage) {
+          // 没有更多页面
+          this.loadMoreText = '别拉啦，没有更多。';
+        }
+
         if (result.code === 0) {
-          this.films = result.data.films;
+          // this.films = result.data.films;
+          // 追加
+          // this.films = this.films.push(...result.data.films);  √
+          this.films = this.films.concat(result.data.films);
         } else {
           alert(result.msg);
         }
@@ -77,11 +95,25 @@ export default {
      */
     actorsList (list) {
       let arr = [];
-      arr = list.map(item => {
-        return item.name;
-      });
+      if (list) {
+        arr = list.map(item => {
+          return item.name;
+        });
+      }
 
       return arr.join(' ');
+    },
+
+    /**
+     * 加载更多
+     */
+    loadMore () {
+      // 对当前页码加1
+
+      if (this.pageNum < this.totalPage) {
+        this.pageNum++;
+        this.getFilms();
+      }
     }
   },
 
@@ -154,5 +186,11 @@ export default {
     text-align: center;
     border-radius: px2rem(4);
   }
+}
+
+.load-more {
+  height: px2rem(30);
+  line-height: px2rem(30);
+  text-align: center;
 }
 </style>
