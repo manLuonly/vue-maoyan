@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./animate.css">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+
+    <button @click="isShow = !isShow">切换</button>
+
+    <transition
+      enter-active-class="animated bounceInRight"
+      leave-active-class="animated bounceOutRight">
+      <div class="box" v-if="isShow">我是个小d</div>
+    </transition>
+
+
+    <div>我是个大D</div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: {
+        isShow: true
+      }
+    })
+  </script>
+
+</body>
+</html>

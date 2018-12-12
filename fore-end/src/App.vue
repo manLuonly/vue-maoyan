@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition
+      mode="out-in"
+      enter-active-class="animated bounceInUp"
+      leave-active-class="animated bounceOutDown">
+      <router-view></router-view>
+    </transition>
     <NavBar></NavBar>
   </div>
 </template>
