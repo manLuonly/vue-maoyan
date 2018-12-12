@@ -15,6 +15,19 @@ router.get('/list', function(req, res) {
   // 1. 需要获取到整个影片的数据条数 - 根据 type 来区分。
   // 2. 根据传递过来的参数计算  skip  limit
 
+  var param = {};
+  if (type === 1) {
+    // 正在热映
+    param = {
+      premiereAt: { $lt: new Date().getTime() / 1000 }
+    }
+  } else {
+    // 即将上映
+    param = {
+      premiereAt: { $gte: new Date().getTime() / 1000 }
+    }
+  }
+
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
     if (err) {
       // 直接返回错误
@@ -29,19 +42,6 @@ router.get('/list', function(req, res) {
 
       async.waterfall([
         function (cb) {
-          var param = {};
-          if (type === 1) {
-            // 正在热映
-            param = {
-              premiereAt: { $lt: new Date().getTime() / 1000 }
-            }
-          } else {
-            // 即将上映
-            param = {
-              premiereAt: { $gte: new Date().getTime() / 1000 }
-            }
-          }
-
           db.collection('films').find(param).count(function(err, num) {
             if (err) {
               cb(err);
@@ -52,19 +52,6 @@ router.get('/list', function(req, res) {
         },
 
         function (num, cb) {
-          var param = {};
-          if (type === 1) {
-            // 正在热映
-            param = {
-              premiereAt: { $lt: new Date().getTime() / 1000 }
-            }
-          } else {
-            // 即将上映
-            param = {
-              premiereAt: { $gte: new Date().getTime() / 1000 }
-            }
-          }
-
           db.collection('films').find(param).skip(pageSize * pageNum - pageSize).limit(pageSize).toArray(function(err, data) {
             if (err) {
               cb(err);
@@ -92,8 +79,6 @@ router.get('/list', function(req, res) {
         }
         client.close();
       })
-
-
     }
   })
 })
