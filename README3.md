@@ -38,3 +38,15 @@ A - C - B
 B - C - A
 
 vue-cli 2.x 的版本中，我们去 config/index.js  dev  proxyTable 配置。。。。。
+
+
+# 路由跳转是使用 router-link  a标签
+
+> 可以通过js的代码来操作路由的跳转。 $route - 当前的路由对象  $router - 路由管理器对象
+> 通过路由管理对象，就可是实现 编程式导航
+
+- this.$router.push() - 追加  router-link to
+- this.$router.replace() - 替换 router-link replace
+- this.$router.go(n) n - Number 如果是正数 前进 , 负数 后退
+
+push 与 replace 都可以传 字符串的path路径。要么是传 对象

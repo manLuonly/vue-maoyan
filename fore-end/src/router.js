@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 
 // 引入路由组件
 import Films from './views/Films.vue';
+import NowPaly from './components/NowPaly';
+import SoonPlay from './components/SoonPlay';
 import Cinema from './views/Cinema.vue';
 import Center from './views/Center.vue';
 
@@ -16,7 +18,19 @@ const router = new VueRouter({
       // 首页
       path: '/films',
       name: 'films',
-      component: Films
+      component: Films,
+      children: [
+        {
+          path: 'nowPlaying',
+          name: 'nowPlaying',
+          component: NowPaly
+        },
+        {
+          path: 'comingSoon',
+          name: 'comingSoon',
+          component: SoonPlay
+        }
+      ]
     },
     {
       // 影院页
@@ -32,7 +46,7 @@ const router = new VueRouter({
     },
     {
       path: '*',
-      redirect: '/films'
+      redirect: '/films/nowPlaying'
     }
   ]
 });
