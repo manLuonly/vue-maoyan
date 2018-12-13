@@ -28,9 +28,13 @@ const router = new VueRouter({
         {
           // 首页
           path: 'films',
-          name: 'films',
+          // name: 'films',
           component: () => import('./views/Films.vue'),
           children: [
+            {
+              path: '',
+              redirect: '/films/nowPlaying'
+            },
             {
               path: 'nowPlaying',
               name: 'nowPlaying',

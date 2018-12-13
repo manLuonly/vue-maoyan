@@ -1,11 +1,13 @@
 // NavBar 组件
 <template>
   <ul class="nav-bar">
+    <router-link to="/" tag="li" active-class="z-act" exact>哈哈哈哈</router-link>
+
     <router-link
       v-for="(item, index) in bars"
       :key="index"
       :class="item.id"
-      :to="{ path: item.path }"
+      :to="{ path: item.path  }"
       tag="li"
       active-class="z-act">
       <i class="img"></i>
@@ -22,8 +24,8 @@ export default {
     return {
       bars: [
         {
-          id: 'films',
-          path: '/films/nowPlaying',
+          id: 'nowPlaying',
+          path: '/films',
           name: '电影'
         },
         {
@@ -70,7 +72,7 @@ export default {
       background-size: 100%;
     }
 
-    &.films {
+    &.nowPlaying {
       .img {
         background-image: url('./images/films.png');
       }
