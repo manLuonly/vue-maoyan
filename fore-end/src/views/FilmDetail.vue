@@ -7,7 +7,7 @@
     <div class="film-detail">
       <div class="col">
         <div class="film-name">
-          <span class="name">海王 </span>
+          <span class="name">{{ filmName }}</span>
           <span class="item">3D</span>
         </div>
         <div class="film-grade">
@@ -30,6 +30,8 @@
         <i class="iconfont icon-xiala"></i>
       </div>
     </div>
+
+    <router-link to="/film/9898">我要看猫王</router-link>
   </div>
 </template>
 
@@ -37,9 +39,34 @@
 export default {
   name: 'FilmDetail',
 
+  data () {
+    return {
+      filmName: ''
+    }
+  },
+
+  watch: {
+    $route (newVal, oldVal) {
+      // $route 发生变化，我就请求后台数据
+      this.getFilmDetail();
+    }
+  },
+
+  methods: {
+    getFilmDetail () {
+      setTimeout(() => {
+        if (this.$route.params.filmId === 4469) {
+          this.filmName = '海王';
+        } else {
+          this.filmName = '猫王';
+        }
+      }, 2000);
+    }
+  },
+
   created () {
-    let filmId = this.$route.params.filmId;
-    console.log(filmId);
+    // let filmId = this.$route.params.filmId;
+    this.getFilmDetail();
   }
 }
 </script>
