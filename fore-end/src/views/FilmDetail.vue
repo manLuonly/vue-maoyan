@@ -46,10 +46,10 @@ export default {
   },
 
   watch: {
-    $route (newVal, oldVal) {
-      // $route 发生变化，我就请求后台数据
-      this.getFilmDetail();
-    }
+    // $route (newVal, oldVal) {
+    //   // $route 发生变化，我就请求后台数据
+    //   this.getFilmDetail();
+    // }
   },
 
   methods: {
@@ -67,6 +67,23 @@ export default {
   created () {
     // let filmId = this.$route.params.filmId;
     this.getFilmDetail();
+  },
+
+  beforeRouteEnter (to, from, next) {
+    console.log('进入到详情');
+    next();
+  },
+
+  beforeRouteUpdate (to, from, next) {
+    console.log('详情页组件路由有更新的情况, 会进来');
+    // 上面 watch $route 的代码可以在这里写
+    this.getFilmDetail();
+    next();
+  },
+
+  beforeRouteLeave (to, from, next) {
+    console.log('详情页离开之前，会调用');
+    next();
   }
 }
 </script>

@@ -1,6 +1,8 @@
 // 路由相关的代码
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 // 引入路由组件
 import Home from './views/Home.vue';
@@ -20,6 +22,10 @@ const router = new VueRouter({
       path: '/',
       component: Home,
       children: [
+        {
+          path: '',
+          redirect: '/films/nowPlaying'
+        },
         {
           // 首页
           path: 'films',
@@ -56,7 +62,11 @@ const router = new VueRouter({
       // 详情页面
       path: '/film/:filmId',
       name: 'filmDetail',
-      component: FilmDetail
+      component: FilmDetail,
+      beforeEnter (to, from, next) {
+        console.log('我是一个路由独享的钩子函数');
+        next();
+      }
     },
     {
       path: '*',
@@ -64,6 +74,32 @@ const router = new VueRouter({
     }
   ]
 });
+
+/**
+ * 全局前置守卫
+ * @param {Object} to 要去哪里
+ * @param {Object} from 从哪里来
+ * @param {Function} next 结束当前的钩子函数，进入到下一个相应的钩子函数，如果没有的话，即最终来控制是否可以切换路由
+ *  */
+router.beforeEach((to, from, next) => {
+  NProgress.start();
+
+  console.log(to);
+  console.log(from);
+
+  // 请一定记得要做 next
+  next();
+})
+
+/**
+ * 全局后置守卫
+ * @param {Object} to 要去哪里
+ * @param {Object} from 从哪里来
+ */
+router.afterEach((to, from) => {
+  // 做一些额外处理，比如进度条的效果
+  NProgress.done();
+})
 
 // 需要暴露
 export default router;
