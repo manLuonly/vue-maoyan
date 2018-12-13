@@ -6,7 +6,6 @@
       leave-active-class="animated bounceOutDown">
       <router-view></router-view>
     </transition>
-    <NavBar></NavBar>
   </div>
 </template>
 

@@ -4,7 +4,8 @@
     <ul>
       <li
         v-for="(item, index) in films"
-        :key="index">
+        :key="index"
+        @click="goDetail(item.filmId)">
         <div class="img">
           <img :src="item.poster" alt="">
         </div>
@@ -114,6 +115,21 @@ export default {
         this.pageNum++;
         this.getFilms();
       }
+    },
+
+    /**
+     * 去详情页面
+     * @param {String} id 影片ID
+     */
+    goDetail (id) {
+      this.$router.push({
+        // path: '/film/' + id,
+        // path: `/film/${id}`,
+        name: 'filmDetail',
+        params: {
+          filmId: id
+        }
+      })
     }
   },
 

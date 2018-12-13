@@ -35,7 +35,12 @@
 
 <script>
 export default {
-  name: 'FilmDetail'
+  name: 'FilmDetail',
+
+  created () {
+    let filmId = this.$route.params.filmId;
+    console.log(filmId);
+  }
 }
 </script>
 
