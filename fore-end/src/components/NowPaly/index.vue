@@ -144,6 +144,7 @@ export default {
   }
 
   .info {
+    flex: 1;
     min-width: 100px;
     padding: 0 px2rem(10);
     font-size: px2rem(14);

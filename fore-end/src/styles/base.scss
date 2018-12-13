@@ -2,9 +2,11 @@
 
 @import './common/reset.scss';
 @import './common/var.scss';
+@import './common/px2rem.scss';
 
 html, body {
   height: 100%;
+  font-size: px2rem(16);
 }
 
 #app {

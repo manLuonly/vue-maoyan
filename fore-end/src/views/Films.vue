@@ -1,25 +1,7 @@
 <template>
   <div class="films-list">
-    <!-- 轮播图 -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="../images/pic-1.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-2.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-3.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="../images/pic-4.jpg" alt="">
-        </div>
-      </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-    </div>
-    <!-- /轮播图 -->
+
+    <Banner></Banner>
 
     <!-- 定位城市 -->
     <div class="city-fixed">
@@ -49,9 +31,14 @@
 <script>
 // 引入 Swiper
 import Swiper from 'swiper';
+import Banner from '../components/Banner';
 
 export default {
   name: 'Films',
+
+  components: {
+    Banner
+  },
 
   data () {
     return {
