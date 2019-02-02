@@ -12,6 +12,7 @@ router.get('/list', function(req, res) {
   var pageSize = parseInt(req.query.pageSize) || 5; // 每页显示多少条
   var type = parseInt(req.query.type) || 1; // 影片的类型，正在上映or即将上映 1-正在上映 2-即将上映
 
+  console.log(pageNum,pageSize,type)
   // 1. 需要获取到整个影片的数据条数 - 根据 type 来区分。
   // 2. 根据传递过来的参数计算  skip  limit
 
@@ -38,11 +39,11 @@ router.get('/list', function(req, res) {
       })
     } else {
 
-      var db = client.db('maizuo');
+      var db = client.db('maoyan');
 
       async.waterfall([
         function (cb) {
-          db.collection('films').find(param).count(function(err, num) {
+          db.collection('films').find().count(function(err, num) {
             if (err) {
               cb(err);
             } else {
@@ -52,7 +53,7 @@ router.get('/list', function(req, res) {
         },
 
         function (num, cb) {
-          db.collection('films').find(param).skip(pageSize * pageNum - pageSize).limit(pageSize).toArray(function(err, data) {
+          db.collection('films').find().skip(pageSize * pageNum - pageSize).limit(pageSize).toArray(function(err, data) {
             if (err) {
               cb(err);
             } else {
@@ -61,6 +62,7 @@ router.get('/list', function(req, res) {
           })
         }
       ], function(err, result) {
+        console.log(result)
         if (err) {
           console.log(err);
           res.json({

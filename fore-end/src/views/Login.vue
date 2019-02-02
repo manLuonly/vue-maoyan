@@ -39,25 +39,24 @@ export default {
 
   methods: {
     handleLogin () {
-      axios.get('/static/api/users.json', {
+      axios.post('/api/user/login', {
         params: {
-          phone: this.phoneInput,
-          code: this.codeInput
+          username: this.phoneInput,
+          password: this.codeInput
         }
       }).then(res => {
-        var result = res.data;
-        if (result.phone === this.phoneInput && result.code === this.codeInput) {
-          console.log('登录成功');
-          // 写入 本地存储
-          localStorage.setItem('userName', '张三');
-
-          // var myNeedPage = localStorage.getItem('myNeedPage')
-
-          // 取出 query的 redirect 的值
-          let redirect = this.$route.query.redirect;
+        console.log(res)
+        let data = res.data; // 后台返回的状态
+        let username = res.data.username; // 后台返回的用户名
+        if (data.code === 0) {
+          alert('登录成功')
+          // 写入本地存储
+          localStorage.setItem('userName', username);
+          var redirect = '/user';
+          // 登录成功从定向
           this.$router.replace(redirect);
-        } else {
-          console.log('手机号或验证码错误');
+        } else if (data.code === 2) {
+          alert('用户已存在')
         }
       })
     }

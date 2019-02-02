@@ -5,24 +5,24 @@
       <li
         v-for="(item, index) in films"
         :key="index"
-        @click="goDetail(item.filmId)">
+        @click="goDetail(item.id)">
         <div class="img">
-          <img :src="item.poster" alt="">
+          <img :src="item.img" alt="">
         </div>
         <div class="info">
           <div>
-            <span class="name">{{ item.name }}</span>
-            <span class="type">{{ item.filmType.name }}</span>
+            <span class="name">{{ item.nm }}</span>
+            <span class="type">{{ item.version }}</span>
           </div>
           <div>
-            <span class="label">观众评分</span>
-            <span class="grade">{{ item.grade }}</span>
+            <span class="label">  观众评分 </span>
+            <span class="grade">{{ item.sc ? item.sc : item.wish }}</span>
           </div>
           <div>
-            <span class="label">主演： {{ actorsList(item.actors) }}</span>
+            <span class="label">主演： {{ item.star }}</span>
           </div>
           <div>
-            <span class="label">{{ item.nation }} | {{ item.runtime }}分钟</span>
+            <span class="label">{{ item.showInfo }}</span>
           </div>
         </div>
         <div class="buy">购票</div>
@@ -65,7 +65,6 @@ export default {
           pageSize: this.pageSize
         }
       }).then((response) => {
-        // PS: res 不单单包含后台给的数据，还有一些个额外的东西。
         // console.log(res);
         let result = response.data;
         console.log(result);
@@ -91,7 +90,7 @@ export default {
     },
 
     /**
-     * 排列我们主演列表
+     * 排列主演列表
      * @param {Array} list 主演列表
      */
     actorsList (list) {
@@ -198,8 +197,8 @@ export default {
     height: px2rem(26);
     line-height: px2rem(26);
     font-size: px2rem(14);
-    color: #ff5f16;
-    border: px2rem(1) solid #ff5f16;
+    color: #fff;
+    background-color: #f03d37;
     text-align: center;
     border-radius: px2rem(4);
   }

@@ -1,7 +1,6 @@
 // NavBar 组件
 <template>
   <ul class="nav-bar">
-    <router-link to="/" tag="li" active-class="z-act" exact>哈哈哈哈</router-link>
 
     <router-link
       v-for="(item, index) in bars"
@@ -49,7 +48,7 @@ export default {
 @import '../../styles/common/px2rem.scss';
 
 .nav-bar {
-  flex-shrink: 0; // 不受兄弟压缩
+  flex-shrink: 0;
   display: flex;
   height: px2rem(50);
   border-top: px2rem(1) solid #ededed;
@@ -98,7 +97,7 @@ export default {
     }
 
     &.z-act {
-      color: #ff5f16;
+      color: #f03d37;
     }
   }
 }

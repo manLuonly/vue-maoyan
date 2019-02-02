@@ -1,25 +1,20 @@
 <template>
-  <div class="center-view">
-    <div class='navbar'>
+  <div class='navbar'>
     <h1 class="nav-header">猫眼电影</h1>
-  </div>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Center'
-
-};
+  name: ''
+}
 </script>
 
-<style lang="scss" scoped>
-@import "@/styles/common/px2rem.scss";
-
-.center-view {
-  flex: 1;
-    .navbar{
+<style lang="scss">
+@import '../../styles/common/px2rem.scss';
+.navbar{
+  position: sticky;
+  top: 0;
   width: 100%;
   height: px2rem(50.5);
   background: #e54847;
@@ -31,7 +26,6 @@ export default {
     line-height: px2rem(50);
     color: white;
   }
-}
 }
 
 </style>

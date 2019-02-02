@@ -4,29 +4,32 @@
     <ul>
       <li
         v-for="(item, index) in films"
-        :key="index">
+        :key="index"
+        @click="goDetail(item.id)">
         <div class="img">
-          <img :src="item.poster" alt="">
+          <img :src="item.img" alt="">
         </div>
         <div class="info">
           <div>
-            <span class="name">{{ item.name }}</span>
-            <span class="type">{{ item.filmType.name }}</span>
+            <span class="name">{{ item.nm }}</span>
+            <span class="type">{{ item.version }}</span>
           </div>
           <div>
-            <span class="label">观众评分</span>
-            <span class="grade">{{ item.grade }}</span>
+            <span class="label">  观众评分 </span>
+            <span class="grade">{{ item.sc ? item.sc : item.wish }}</span>
           </div>
           <div>
-            <span class="label">主演： {{ actorsList(item.actors) }}</span>
+            <span class="label">主演： {{ item.star }}</span>
           </div>
           <div>
-            <span class="label">{{ item.nation }} | {{ item.runtime }}分钟</span>
+            <span class="label">{{ item.showInfo }}</span>
           </div>
         </div>
-        <div class="buy">预约</div>
+        <div class="buy">购票</div>
       </li>
     </ul>
+
+    <div class="load-more" @click="loadMore">{{ loadMoreText }}</div>
   </div>
   <!-- /list -->
 </template>
@@ -35,13 +38,16 @@
 import axios from 'axios';
 
 export default {
-  name: 'SoonPlay',
+  name: 'NowPlay',
 
   data () {
     return {
       films: [],
+
+      loadMoreText: '点击，加载下一页',
+
       pageNum: 1, // 当前页码
-      pageSize: 5, // 每页条数
+      pageSize: 10, // 每页条数
       totalPage: 0 // 总页数
     }
   },
@@ -57,15 +63,27 @@ export default {
           // get 请求的参数要放在这个里面传递
           pageNum: this.pageNum,
           pageSize: this.pageSize,
-          type: 2
+          globalReleased: true
         }
       }).then((response) => {
-        // PS: res 不单单包含后台给的数据，还有一些个额外的东西。
         // console.log(res);
         let result = response.data;
         console.log(result);
+
+        // 一共多少页
+        this.totalPage = Math.ceil(result.data.total / this.pageSize);
+
+        // 判断是否还有更多页
+        if (this.pageNum >= this.totalPage) {
+          // 没有更多页面
+          this.loadMoreText = '别拉啦，没有更多。';
+        }
+
         if (result.code === 0) {
-          this.films = result.data.films;
+          // this.films = result.data.films;
+          // 追加
+          // this.films = this.films.push(...result.data.films);  √
+          this.films = this.films.concat(result.data.films);
         } else {
           alert(result.msg);
         }
@@ -73,16 +91,45 @@ export default {
     },
 
     /**
-     * 排列我们主演列表
+     * 排列主演列表
      * @param {Array} list 主演列表
      */
     actorsList (list) {
       let arr = [];
-      arr = list.map(item => {
-        return item.name;
-      });
+      if (list) {
+        arr = list.map(item => {
+          return item.name;
+        });
+      }
 
       return arr.join(' ');
+    },
+
+    /**
+     * 加载更多
+     */
+    loadMore () {
+      // 对当前页码加1
+
+      if (this.pageNum < this.totalPage) {
+        this.pageNum++;
+        this.getFilms();
+      }
+    },
+
+    /**
+     * 去详情页面
+     * @param {String} id 影片ID
+     */
+    goDetail (id) {
+      this.$router.push({
+        // path: '/film/' + id,
+        // path: `/film/${id}`,
+        name: 'filmDetail',
+        params: {
+          filmId: id
+        }
+      })
     }
   },
 
@@ -113,6 +160,7 @@ export default {
   }
 
   .info {
+    flex: 1;
     min-width: 100px;
     padding: 0 px2rem(10);
     font-size: px2rem(14);
@@ -150,10 +198,16 @@ export default {
     height: px2rem(26);
     line-height: px2rem(26);
     font-size: px2rem(14);
-    color: #ff5f16;
-    border: px2rem(1) solid #ff5f16;
+    color: #fff;
+    background-color: #f03d37;
     text-align: center;
     border-radius: px2rem(4);
   }
+}
+
+.load-more {
+  height: px2rem(30);
+  line-height: px2rem(30);
+  text-align: center;
 }
 </style>

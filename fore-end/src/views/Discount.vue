@@ -1,6 +1,6 @@
 <template>
   <div>
-    我是card
+    我是优惠券
   </div>
 </template>
 

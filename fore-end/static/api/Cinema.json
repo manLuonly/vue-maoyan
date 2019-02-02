@@ -1,0 +1,489 @@
+[
+    {
+        "id": 25431,
+        "mark": 0,
+        "nm": "明星国际影城(宝安店)",
+        "sellPrice": "28.9",
+        "addr": "宝安区西乡街道固戍二路万力华大厦一楼",
+        "distance": "1.6km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减6元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 15855,
+        "mark": 0,
+        "nm": "凤凰国际影城",
+        "sellPrice": "33",
+        "addr": "宝安区西乡街道宝安大道5010号西部硅谷（后瑞地铁站旁）B座1楼",
+        "distance": "2.4km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallType": [
+                "杜比全景声厅"
+            ],
+            "hallTypeVOList": [
+                {
+                    "name": "杜比全景声厅",
+                    "url": ""
+                }
+            ],
+            "sell": 1,
+            "snack": 1
+        },
+        "promotion": {}
+    },
+    {
+        "id": 17068,
+        "mark": 0,
+        "nm": "传奇影城",
+        "sellPrice": "19.9",
+        "addr": "宝安区西乡街道后瑞地铁站B出口100处（壹航城购物中心T2栋）",
+        "distance": "2.9km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 0
+        },
+        "promotion": {}
+    },
+    {
+        "id": 15428,
+        "mark": 0,
+        "nm": "中影UL城市影城(黄田店)",
+        "sellPrice": "33",
+        "addr": "宝安区西乡街道长园路28号昌宏百货四楼",
+        "distance": "3km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1
+        },
+        "promotion": {}
+    },
+    {
+        "id": 16897,
+        "mark": 0,
+        "nm": "美视国际影城(4K沉浸音)",
+        "sellPrice": "19.9",
+        "addr": "宝安区西乡街道前进二路桃源居10区28栋（人人乐超市二楼）",
+        "distance": "3.2km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减10元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 7555,
+        "mark": 0,
+        "nm": "嘉乐国际影城(固戍店)",
+        "sellPrice": "23",
+        "addr": "宝安区西乡固戍村固戍一路置富广场一楼",
+        "distance": "3.4km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减2元",
+            "couponPromotionTag": "有3元券可领",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 17408,
+        "mark": 0,
+        "nm": "中影w影城",
+        "sellPrice": "28",
+        "addr": "宝安区西乡街道翠湖花园兴悦广场2楼",
+        "distance": "3.7km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减3元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 2623,
+        "mark": 0,
+        "nm": "新华银兴国际影城",
+        "sellPrice": "19.9",
+        "addr": "宝安区西乡宝安大道与金海路交汇处金港华庭一栋三层（西乡客运站对面）",
+        "distance": "4km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减5元",
+            "platformActivityTag": "新喜剧之王等2部影片特惠"
+        }
+    },
+    {
+        "id": 15799,
+        "mark": 0,
+        "nm": "中影德金影城(西乡店)",
+        "sellPrice": "23",
+        "addr": "宝安区宝民二路和宝民一路交汇处缤纷时代购物中心一楼",
+        "distance": "4.7km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减6元",
+            "platformActivityTag": "新喜剧之王等2部影片特惠"
+        }
+    },
+    {
+        "id": 13055,
+        "mark": 0,
+        "nm": "云幕国际影城(西乡店)",
+        "sellPrice": "23",
+        "addr": "宝安区西乡大道与工业路交口大益广场对面共乐城购物中心四楼（大益广场对面）",
+        "distance": "4.7km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减7元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 1647,
+        "mark": 0,
+        "nm": "金逸影城(碧海店)",
+        "sellPrice": "25",
+        "addr": "宝安区西乡兴业路3004号七巧国四楼（地铁西乡站C出口）",
+        "distance": "4.9km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1
+        },
+        "promotion": {
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 5425,
+        "mark": 0,
+        "nm": "中影星美国际影城(天虹购物中心店)",
+        "sellPrice": "37.9",
+        "addr": "宝安区西乡大道与新湖路交汇处天虹购物中心东座3楼（西乡地铁口A出口）",
+        "distance": "4.9km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减2元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 24590,
+        "mark": 0,
+        "nm": "中影大导演巨幕影城(深圳西乡店)",
+        "sellPrice": "24",
+        "addr": "宝安区西乡大道230号满京华艺峦大厦3座2楼",
+        "distance": "5.1km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallType": [
+                "CGS中国巨幕厅",
+                "杜比全景声厅",
+                "4K厅"
+            ],
+            "hallTypeVOList": [
+                {
+                    "name": "CGS中国巨幕厅",
+                    "url": ""
+                },
+                {
+                    "name": "杜比全景声厅",
+                    "url": ""
+                },
+                {
+                    "name": "4K厅",
+                    "url": ""
+                }
+            ],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减3元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 16188,
+        "mark": 0,
+        "nm": "中影UL城市巨幕影城(万荟城店)",
+        "sellPrice": "23",
+        "addr": "宝安区西乡街道宝田一路中熙香缤山九栋商业广场四楼",
+        "distance": "5.4km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减6元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 15170,
+        "mark": 0,
+        "nm": "中影100都市影城(彩虹城店)",
+        "sellPrice": "23",
+        "addr": "宝安区前进二路93号彩虹城5楼",
+        "distance": "5.6km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减3元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 173,
+        "mark": 0,
+        "nm": "中影南国影城(宝安店)",
+        "sellPrice": "24",
+        "addr": "宝安区宝安80区宝民二路港隆城购物中心4楼",
+        "distance": "5.8km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallType": [
+                "杜比全景声厅"
+            ],
+            "hallTypeVOList": [
+                {
+                    "name": "杜比全景声厅",
+                    "url": ""
+                }
+            ],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减6元",
+            "platformActivityTag": "新喜剧之王等2部影片特惠"
+        }
+    },
+    {
+        "id": 5913,
+        "mark": 0,
+        "nm": "大地影院(时代城店)",
+        "sellPrice": "38.8",
+        "addr": "宝安区海城路与宝源路交汇处时代城6楼（坪洲地铁站C出口100米）",
+        "distance": "5.8km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "限时¥14.9促销开卡，首单更优惠",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 47,
+        "mark": 0,
+        "nm": "金逸影城(建安店)",
+        "sellPrice": "25",
+        "addr": "宝安区建安二路河东骏丰园七巧国首层（宝润装饰城东北100米以内）",
+        "distance": "6.1km",
+        "tag": {
+            "allowRefund": 0,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 0,
+            "hallType": [
+                "DTS:X 临境音厅"
+            ],
+            "hallTypeVOList": [
+                {
+                    "name": "DTS:X 临境音厅",
+                    "url": ""
+                }
+            ],
+            "sell": 1,
+            "snack": 1
+        },
+        "promotion": {
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 25691,
+        "mark": 0,
+        "nm": "保利万和国际影城(西乡4D店)",
+        "sellPrice": "23",
+        "addr": "宝安区流塘路与宝民二路交汇处国汇通商业广场2楼",
+        "distance": "6.3km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "开卡特惠，首单2张立减8元",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    },
+    {
+        "id": 25415,
+        "mark": 0,
+        "nm": "万豪4k国际影城",
+        "sellPrice": "19.9",
+        "addr": "宝安区西乡街道华广集团4楼",
+        "distance": "6.4km",
+        "tag": {
+            "allowRefund": 1,
+            "buyout": 0,
+            "cityCardTag": 0,
+            "deal": 0,
+            "endorse": 1,
+            "hallTypeVOList": [],
+            "sell": 1,
+            "snack": 1,
+            "vipTag": "折扣卡"
+        },
+        "promotion": {
+            "cardPromotionTag": "限时¥27.9促销开卡，首单更优惠,开卡即赠价值¥48元礼包",
+            "platformActivityTag": "新喜剧之王特惠"
+        }
+    }
+]
