@@ -75,9 +75,10 @@ export default {
     // flex: 1;
     width: px2rem(100);
     height: px2rem(100);
-    background: url(../images/logo.jpg) no-repeat;
+    background: url(../images/center-img.png) no-repeat;
     background-size: 100%;
     margin: px2rem(100) auto;
+    border-radius: 40%;
   }
   .sj,
   .yzm {

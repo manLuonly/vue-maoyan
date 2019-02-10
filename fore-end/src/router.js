@@ -101,7 +101,7 @@ const router = new VueRouter({
         {
           path: 'discount',
           name: 'discount',
-          component: () => import(/* webpackChunkName: "Discount" */ './views/Discount.vue')   
+          component: () => import(/* webpackChunkName: "Discount" */ './views/Discount.vue')
         },
         {
           path: 'rebate',

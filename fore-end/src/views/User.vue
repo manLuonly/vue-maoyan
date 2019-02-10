@@ -1,6 +1,7 @@
 <template>
 <div class="user">
 <div class='navbar'>
+<img src='../images/back.png' onclick="javascript: window.history.back()">
     <h1 class="nav-header">我的</h1>
   </div>
   <div class="my-center">
@@ -21,7 +22,7 @@ export default {
   name: 'Card',
   components: {
     NavBar
-  },
+  }
 };
 </script>
 
@@ -41,6 +42,7 @@ export default {
       text-align: center;
       line-height: px2rem(50);
       color: white;
+      margin-top: px2rem(-50);
     }
   }
   .my-center {

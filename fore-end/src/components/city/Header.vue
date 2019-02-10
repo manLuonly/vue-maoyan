@@ -2,7 +2,7 @@
     <div class="header">
         城市选择
         <router-link to="/">
-            <div class="iconfont back-icon">&#xe624;</div>
+            <div class="iconfont back-icon"><img src='../../images/back.png'></div>
         </router-link>
     </div>
 </template>
@@ -31,6 +31,9 @@ export default{
         font-size: 14px;
         text-align: center;
         color: #fff;
+        img{
+            margin-left: px2rem(-300);
+        }
     }
 }
 </style>
